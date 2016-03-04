@@ -28,7 +28,8 @@
     <div class="col-xs-12">
         <ul class="list-group">
             <!-- 4. ng-repeat works like a loop-->
-            <li ng-repeat="item in skillsItems" class="list-group-item text-center clearfix">
+            <!-- 5. filter with orderBy -->
+            <li ng-repeat="item in skillsItems | orderBy:'itemName'" class="list-group-item text-center clearfix">
                 <span style="font-weight:bold">{{item.itemName}}</span>
 
                 <!--
