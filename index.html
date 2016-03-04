@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- 1. ng-app-->
+<html ng-app="skillsListApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,30 @@
     <title>Skills List</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+
+<!-- 2. ng-controller. In this case it has access to the AppTitle -->
+<body ng-controller="HomeController">
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">
                 <span class="glyphicon glyphicon-apple" style="color:#5bdb48">
                 </span>
-                Skills List
+                {{appTitle}}
             </a>
         </div>
     </div>
 </nav>
 
-<div class="container">
+<!-- 3. Next controller for this div section -->
+<div class="container" ng-controller="SkillsListItemsController">
     <div class="col-xs-12">
         <ul class="list-group">
-            <li class="list-group-item text-center clearfix">
+            <!-- 4. ng-repeat works like a loop-->
+            <li ng-repeat="item in skillsItems" class="list-group-item text-center clearfix">
+                <span style="font-weight:bold">{{item.itemName}}</span>
+
+                <!--
                 <button type="button" class="btn btn-sm btn-success pull-left">
                     <span class="glyphicon glyphicon-unchecked"></span>
                 </button>
@@ -49,6 +57,7 @@
                 <button type="button" class="btn btn-sm btn-default pull-right">
                     <span class="glyphicon glyphicon-pencil"></span>
                 </button>
+            -->
             </li>
         </ul>
     </div>

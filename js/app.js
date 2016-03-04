@@ -3,6 +3,7 @@
  */
 var app = angular.module('skillsListApp', []);
 
+// Controls the body
 app.controller("HomeController", ["$scope", function($scope) {
     $scope.appTitle = "Skills List";
 }]);
