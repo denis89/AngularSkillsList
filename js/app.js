@@ -1,7 +1,8 @@
 /**
  * Created by Denis Doan: www.denisdoan.com
  */
-var app = angular.module('skillsListApp', []);
+ // 7. inject ngRoute
+var app = angular.module('skillsListApp', ["ngRoute"]);
 
 // Controls the body
 app.controller("HomeController", ["$scope", function($scope) {
