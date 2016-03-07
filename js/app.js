@@ -20,7 +20,7 @@ app.config(function($routeProvider){
           controller: "SkillsListItemsController"
       })
       // 14. routing with id
-      .when("/inputItem/:id", {
+      .when("/inputItem/edit/:id", {
           templateUrl: "views/inputItem.html",
           controller: "SkillsListItemsController"
       })
@@ -45,6 +45,15 @@ app.service("SkillsService", function(){
         {id: 7, itemName: 'Web Performance Optimization'},
         {id: 8, itemName: 'APIs'}
     ];
+
+    // 34. Searching for the id
+     // Searching for the id
+    skillsService.findById = function(id) {
+        for (var item in skillsService.skillsItems){
+            if(skillsService.skillsItems[item].id === id)
+              return skillsService.skillsItems[item];
+        }
+    };
 
     // 32. Adding a new id function.
     skillsService.getNewId = function(){

@@ -3,14 +3,15 @@
 	<a href="#/inputItem" style="margin-bottom: 10px;" class="btn btn-primary btn-lg btn-block">
 		<span class="glyphicon glyphicon-plus"></span>
 	</a>
-
         <ul class="list-group">
             <!-- 4. ng-repeat works like a loop-->
             <!-- 5. filter with orderBy -->
             <li ng-repeat="item in skillsItems | orderBy:'itemName'" class="list-group-item text-center clearfix">
                 <span style="font-weight:bold">{{item.itemName}}</span>
-
-                
+                <!-- 33. Edit Button-->
+                <a href="#/addItem/edit/{{item.id}}" class="btn btn-sm btn-default pull-right">
+                <span class="glyphicon glyphicon-pencil"></span>
+                </a>
             </li>
         </ul>
     </div>
