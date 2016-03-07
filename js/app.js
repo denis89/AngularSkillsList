@@ -142,4 +142,14 @@ app.controller("SkillsListItemController", ["$scope", "$routeParams", "$location
 
     // Debugging by console.logging. In this case, it gives the array with all its objects.
  //   console.log($scope.skillsItems);
+
+
  }]);
+
+// 45. Creating a custom directive to define a new HTML Element.
+app.directive("tbSkillsItem", function(){
+  return {
+    restrict: "E",
+    templateUrl: "views/skillsItem.html"
+  }
+});
