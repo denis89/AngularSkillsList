@@ -5,11 +5,13 @@
         </div>
         <form name="groceryForm">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Skills">
+                <!-- 25 ng model. Saving the user input as a variable -->
+                <input type="text" class="form-control" placeholder="Skills" ng-model="skillsItem.itemName">
             </div>
 
             <div class="form-group">
-                <a href="#/" style="margin-bottom: 10px;" class="btn btn-primary btn-lg btn-block">
+                <!-- 26. ng click. AddEventListener-->
+                <a href="#/" style="margin-bottom: 10px;" class="btn btn-primary btn-lg btn-block" ng-click="save()">
         <span class="glyphicon glyphicon-plus"></span>
           Save
     </a>
