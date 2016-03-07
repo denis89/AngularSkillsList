@@ -82,4 +82,8 @@ app.controller("SkillsListItemsController", ["$scope", "$routeParams", "$locatio
 
     // 16 kind of return statement
     $scope.rp = "Route Parameter Value: " + $routeParams.id;
+
+
+    // Debugging by console.logging. In this case, it gives the array with all its objects.
+    console.log($scope.skillsItems);
 }]);
