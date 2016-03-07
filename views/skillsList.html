@@ -9,6 +9,11 @@
             <!-- 5. filter with orderBy -->
             <li ng-repeat="item in skillsItems | orderBy:'itemName'" class="list-group-item text-center clearfix">
                 <span style="font-weight:bold">{{item.itemName}}</span>
+
+                <!-- 41. Adding a delete button with a removeItem() function.-->
+           <button type="button" class="btn btn-sm btn-danger pull-right" ng-click="removeItem(item)">
+            <span class="glyphicon glyphicon-trash"></span>
+        </button>
                 <!-- 33. Edit Button-->
                 <a href="#/inputItem/edit/{{item.id}}" class="btn btn-sm btn-default pull-right">
                 <span class="glyphicon glyphicon-pencil"></span>

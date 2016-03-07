@@ -72,7 +72,11 @@ app.service("SkillsService", function(){
 
        };
 
-    
+    // 43. Declare the removeItem()
+    skillsService.removeItem = function(entry){
+      var index = skillsService.skillsItems.indexOf(entry);
+      skillsService.skillsItems.splice(index, 1);
+    }
        
 
     // 31. You also have to declare the save function here in the service
@@ -99,7 +103,11 @@ app.controller("HomeController", ["$scope", "SkillsService", function($scope, Sk
    // 24 Setting it equal again
     $scope.skillsItems =  SkillsService.skillsItems;
     
-
+     // 42. Declaring removeItem() function
+     $scope.removeItem = function(entry){
+         // The array manipulation is handled by this service.
+      SkillsService.removeItem(entry);
+     }
 }]);
 
 // 15 adding another params $routeParams
