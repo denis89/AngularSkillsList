@@ -3,7 +3,7 @@
         <div class="jumbotron text-center">
             <h1>Add Skills Below</h1>
         </div>
-        <form name="groceryForm">
+        <form name="skillsForm">
             <div class="form-group">
                 <!-- 25 ng model. Saving the user input as a variable -->
                 <input type="text" class="form-control" placeholder="Skills" ng-model="skillsItem.itemName">
@@ -11,19 +11,19 @@
 
             <div class="form-group">
                 <!-- 26. ng click. AddEventListener-->
-                <a href="#/" style="margin-bottom: 10px;" class="btn btn-primary btn-lg btn-block" ng-click="save()">
-        <span class="glyphicon glyphicon-pushpin"></span>
-          Save
-    </a>
+                <button type="button" class="btn btn-success btn-lg btn-block" ng-click="save()">
+                <span class="glyphicon glyphicon-pushpin"></span>
+                Save
+            </button>
                   
                 
             </div>
 
             <div class="form-group">
-                <a href="#/" style="margin-bottom: 10px;" class="btn btn-primary btn-lg btn-block">
-        <span class="glyphicon glyphicon-remove"></span>
-        Cancel
-    </a>
+                <a href="#/" class="btn btn-default btn-lg btn-block">
+                <span class="glyphicon glyphicon-remove"></span>
+                Cancel
+            </a>
                     
             
             </div>
